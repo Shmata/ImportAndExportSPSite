@@ -28,7 +28,7 @@ namespace SPSProvisioningTemplate
             var accessToken = GetAccessToken();
             accessToken.Wait();
             string token = accessToken.Result;
-            string sourceSite = "https://m365b582028.sharepoint.com/sites/Marketing";
+            string sourceSite = "https://tenant.sharepoint.com/sites/subsite";
             
             GetProvisioningTemplate(sourceSite, token);
 
@@ -41,7 +41,7 @@ namespace SPSProvisioningTemplate
             var _path = @"C:\Host\PnPCore\pk.pfx";
             string certificatePassword = "123";
             var _certificate = new X509Certificate2(System.IO.File.ReadAllBytes(_path), certificatePassword);
-            string authority = $"https://login.microsoftonline.com/c061622d-8f14-4a98-9b67-46d06e27df6c";
+            string authority = $"https://login.microsoftonline.com/_TenantID";
             var app = ConfidentialClientApplicationBuilder
                                     .Create("b8528544-c8aa-4392-8a38-4990b1406564")
                                     .WithAuthority(authority, false)
@@ -50,7 +50,7 @@ namespace SPSProvisioningTemplate
 
 
 
-            var token = await app.AcquireTokenForClient(new[] { "https://m365b582028.sharepoint.com/.default" }).ExecuteAsync();
+            var token = await app.AcquireTokenForClient(new[] { "https://tenant.sharepoint.com/.default" }).ExecuteAsync();
             return token.AccessToken;
             
         }
@@ -103,7 +103,7 @@ namespace SPSProvisioningTemplate
 
         private static void ApplyProvisioningTemplate( ProvisioningTemplate template, string accessToken)
         {
-            string targetSite = "https://m365b582028.sharepoint.com/sites/Target";
+            string targetSite = "https://tenant.sharepoint.com/sites/distinationSite";
             using (var ctx = new ClientContext(targetSite))
             {
                 ctx.ExecutingWebRequest += (sender, args) =>
@@ -128,7 +128,7 @@ namespace SPSProvisioningTemplate
                 template.Lists.Add(new ListInstance()
                 {
                     Title = "Test List",
-                    Url = "lists/SapiensTestlist",
+                    Url = "lists/Testlist",
                     TemplateType = (Int32)ListTemplateType.Contacts,
                     EnableAttachments = true
                 });
