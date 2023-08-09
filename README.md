@@ -6,7 +6,7 @@ You can easily create an instance (a template) from your SharePoint online site 
 ## First create a self signed certificate
 in powershell run below command 
 
-**$cert=New-SelfSignedCertificate -Subject "CN=Sapiens.at.SharePoint.Shahab" -CertStoreLocation "Cert:\CurrentUser\My"  -KeyExportPolicy Exportable -KeySpec Signature -NotAfter (Get-Date).AddMonths(24)**
+**$cert=New-SelfSignedCertificate -Subject "CN=CompName" -CertStoreLocation "Cert:\CurrentUser\My"  -KeyExportPolicy Exportable -KeySpec Signature -NotAfter (Get-Date).AddMonths(24)**
 
 ## Second export your recently created certificate in addition to private key 
 in run -> mmc -> Certificates - Current User -> Personal -> Certificate 
