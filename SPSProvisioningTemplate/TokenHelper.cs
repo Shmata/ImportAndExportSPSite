@@ -34,7 +34,7 @@ namespace SPSProvisioningTemplate
 
 
 
-            var token = await app.AcquireTokenForClient(new[] { "https://m365b582028.sharepoint.com/.default" }).ExecuteAsync();
+            var token = await app.AcquireTokenForClient(new[] { "https://YOURTenant.sharepoint.com/.default" }).ExecuteAsync();
             return token.AccessToken;
 
         }
