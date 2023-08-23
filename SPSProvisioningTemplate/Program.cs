@@ -6,8 +6,8 @@ namespace SPSProvisioningTemplate
 {
     public class Program
     {
-        private const string SOURCE_URL = "https://m365b582028.sharepoint.com/sites/NewSource";
-        private const string TARGET_URL = "https://m365b582028.sharepoint.com/sites/Destination";
+        private const string SOURCE_URL = "https://YOURTenant.sharepoint.com/sites/NewSource";
+        private const string TARGET_URL = "https://YOURTenant.sharepoint.com/sites/Destination";
         static void Main(string[] args)
         {
 
