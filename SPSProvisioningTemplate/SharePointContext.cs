@@ -23,7 +23,7 @@ namespace SPSProvisioningTemplate
     public class SharePointContext
     {
         private string accessToken;
-        private string webUrl = "https://m365b582028.sharepoint.com/sites/NewSource";
+        private string webUrl = "https://YOURTenant.sharepoint.com/sites/NewSource";
         private const string TEMPLATE_LIBRARY = "SiteAssets";
         private const string TEMPLATE_FILENAME = "PnPProvisioningDemo.xml";
         private const string REPLACE_SLASH_WITH = "__";
