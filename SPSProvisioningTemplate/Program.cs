@@ -1,7 +1,5 @@
 ﻿using Microsoft.SharePoint.Client;
 using Microsoft.IdentityModel.Tokens;
-
-
 namespace SPSProvisioningTemplate
 {
     public class Program
