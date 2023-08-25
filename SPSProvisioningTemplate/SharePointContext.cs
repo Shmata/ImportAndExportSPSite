@@ -25,6 +25,7 @@ namespace SPSProvisioningTemplate
         private string accessToken;
         private string webUrl = "https://YOURTenant.sharepoint.com/sites/NewSource";
         private const string TEMPLATE_LIBRARY = "SiteAssets";
+        //Optional name for the template file.
         private const string TEMPLATE_FILENAME = "PnPProvisioningDemo.xml";
         private const string REPLACE_SLASH_WITH = "__";
         private readonly static Microsoft.SharePoint.Client.FieldType[] _unsupportedFieldTypes =
