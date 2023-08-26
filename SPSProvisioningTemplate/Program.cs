@@ -20,7 +20,6 @@ namespace SPSProvisioningTemplate
                     args.WebRequestExecutor.RequestHeaders["Authorization"] = "Bearer " + token;
                 };
 
-
                 ctx.ExecuteQuery();
                 if (ctx.Url.IsNullOrEmpty())
                 {
