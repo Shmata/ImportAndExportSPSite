@@ -1,7 +1,7 @@
 ![ConsoleApp](https://github.com/Shmata/ImportAndExportSPSite/assets/2398297/d7b887bb-ac0c-408c-88ba-942ca035060f)
 
 # ImportAndExportSPSite
-You can easily create an instance (a template) from your SharePoint online site including lists,docs,settings,users,content types and export it to another SharePoint online site. 
+You can easily create an instance (a template) from your SharePoint online site including lists,document libraries,settings,users,content types and export it to another SharePoint online site. 
 
 ## First create a self signed certificate
 in powershell run below command 
